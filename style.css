@@ -18,25 +18,30 @@
     height: 100%;
     background: url(img/heart.png);
     background-size: cover;
-    transform: rotate(31.92deg);
+   
     animation: heart 1.3s linear infinite;
 }
 
 @keyframes heart {
     0% {
         top: 0px;
+        transform: scale(1) rotate(31.92deg)
     }
     25%{
-        top: 5px
+        top: 5px;
+        transform: scale(1.05) rotate(31.92deg)
     }
     50% {
         top: 10px;
+        transform: scale(1) rotate(31.92deg)
     }
     75% {
         top: 5px;
-    }
+        transform: scale(1.05) rotate(31.92deg)
+    } 
     100% {
         top: 0px;
+        transform: scale(1) rotate(31.92deg)
     }
 
 }
@@ -92,20 +97,29 @@
 }
 
 .text{
+    
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
     margin: auto;
-    text-align: center;
 }
 
 .text h1{
+    overflow-x: hidden ;
+    white-space: nowrap;
+    letter-spacing: .15em;
     font-size: 180px;
     font-family: 'Single Day', cursive;
+   
     
 }
+
 
 .text p{
     font-size: 90px;
     font-family: 'Pacifico', cursive;
-    margin-top: 50px;
+    
 
 }
 
